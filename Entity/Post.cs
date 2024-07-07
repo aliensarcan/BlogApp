@@ -10,6 +10,8 @@ public class Post
     public string? Title {get; set;}
 
     public string? Content { get; set; }
+    public string? Image { get; set; }
+
 
     public DateTime PublishedOn { get; set; }
 

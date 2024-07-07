@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BogApp.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20240623183830_InitialCreate")]
+    [Migration("20240707201238_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -56,6 +56,9 @@ namespace BogApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("Isacticve")
                         .HasColumnType("INTEGER");
 
@@ -94,6 +97,9 @@ namespace BogApp.Migrations
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
                         .HasColumnType("TEXT");

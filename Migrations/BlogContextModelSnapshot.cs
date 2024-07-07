@@ -53,6 +53,9 @@ namespace BogApp.Migrations
                     b.Property<string>("Content")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT");
+
                     b.Property<bool>("Isacticve")
                         .HasColumnType("INTEGER");
 
@@ -91,6 +94,9 @@ namespace BogApp.Migrations
                     b.Property<int>("UserId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
+
+                    b.Property<string>("Image")
+                        .HasColumnType("TEXT");
 
                     b.Property<string>("UserName")
                         .HasColumnType("TEXT");

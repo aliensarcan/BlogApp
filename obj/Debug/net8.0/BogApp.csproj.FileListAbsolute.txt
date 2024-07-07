@@ -120,3 +120,6 @@ C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\refint\BogApp.dll
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.pdb
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.genruntimeconfig.cache
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\ref\BogApp.dll
+C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.RazorAssemblyInfo.cache
+C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.RazorAssemblyInfo.cs
+C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.sourcelink.json
