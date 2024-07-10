@@ -45,15 +45,19 @@ namespace BlogApp.Data.Concrete.EfCore
                         new Post{
                             Title="Asp.net Core",
                             Content= "Asp.net Core Dersleri",
+                            Image = "a.jpg",
                             Isacticve =true,
                             PublishedOn=DateTime.Now.AddDays(-10),
                             Tags = context.Tags.Take(3).ToList(),
+                            
                             UserId= 1
+                            
                         },
                         
                         new Post{
                             Title="Php ",
                             Content= "Php Core Dersleri",
+                            Image = "b.jpg",
                             Isacticve =true,
                             PublishedOn=DateTime.Now.AddDays(-20),
                             Tags = context.Tags.Take(3).ToList(),
@@ -63,9 +67,11 @@ namespace BlogApp.Data.Concrete.EfCore
                         new Post{
                             Title="Django",
                             Content= "Django Dersleri",
+                            Image= "c.jpg",
                             Isacticve =true,
                             PublishedOn=DateTime.Now.AddDays(-5),
                             Tags = context.Tags.Take(3).ToList(),
+                            
                             UserId= 2
                         }
                         

@@ -123,3 +123,5 @@ C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\ref\BogApp.dll
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.RazorAssemblyInfo.cache
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.RazorAssemblyInfo.cs
 C:\Users\ALENCA\BlogApp\obj\Debug\net8.0\BogApp.sourcelink.json
+C:\Users\ALENCA\BlogApp\bin\Debug\net8.0\libman.json
+C:\Users\ALENCA\BlogApp\bin\Debug\net8.0\BogApp.staticwebassets.runtime.json
