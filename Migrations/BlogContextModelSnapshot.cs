@@ -56,7 +56,7 @@ namespace BogApp.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Isacticve")
+                    b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublishedOn")

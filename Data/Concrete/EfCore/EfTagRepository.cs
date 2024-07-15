@@ -9,14 +9,14 @@ namespace BlogApp.Data.Concrete
         private BlogContext _context;
         public EfTagRepository(BlogContext context)
         {
-            _context= context;
+            _context = context;
         }
-        public IQueryable<Tag> Tags=> _context.Tags;
+        public IQueryable<Tag> Tags => _context.Tags;
 
-        public void CreateTag (Tag Tag)
+        public void CreateTag(Tag Tag)
         {
-           _context.Tags.Add(Tag);
-           _context.SaveChanges();
+            _context.Tags.Add(Tag);
+            _context.SaveChanges();
         }
     }
 }

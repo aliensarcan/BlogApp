@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BogApp.Migrations
 {
     [DbContext(typeof(BlogContext))]
-    [Migration("20240710174201_InitialCreate")]
+    [Migration("20240715193648_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -59,7 +59,7 @@ namespace BogApp.Migrations
                     b.Property<string>("Image")
                         .HasColumnType("TEXT");
 
-                    b.Property<bool>("Isacticve")
+                    b.Property<bool>("IsActive")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublishedOn")
