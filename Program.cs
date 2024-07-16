@@ -33,6 +33,6 @@ SeedData.TestVerileriniDoldur(app);
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=posts}/{action=Index}/{id?}");
 
 app.Run();
