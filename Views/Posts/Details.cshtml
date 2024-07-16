@@ -13,8 +13,8 @@
         </div>
     </div>
     <div class="col-lg-4">
-        <vc:tags-menu></vc:tags-menu>
-        <vc:new-posts></vc:new-posts>
+         @await Component.InvokeAsync("TagsMenu")
+        @await Component.InvokeAsync("NewPosts")
     </div>
        
 </div>

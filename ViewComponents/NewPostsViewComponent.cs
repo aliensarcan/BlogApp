@@ -17,7 +17,7 @@ namespace BlogApp.ViewComponents
             return View(await _postRepository
                                 .Posts
                                 .OrderByDescending(p => p.PublishedOn)
-                                .Take(0)
+                                .Take(5)
                                 .ToListAsync()
             );
         }
