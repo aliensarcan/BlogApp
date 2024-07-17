@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "SwSuBB3MvbJAGoCnYgcFa9QyYrr7Uuhq1EYQYAnvIUM=",
+  "Hash": "6meFIB70ajdqEsVtZcQ4g58h8NfCxD6JCMCMXp64pdY=",
   "Source": "BogApp",
   "BasePath": "_content/BogApp",
   "Mode": "Default",
@@ -93,12 +93,12 @@
       "OriginalItemSpec": "wwwroot\\img\\3.jpg"
     },
     {
-      "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\a.jpg",
+      "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\alenca.jpg",
       "SourceId": "BogApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\",
       "BasePath": "_content/BogApp",
-      "RelativePath": "img/a.jpg",
+      "RelativePath": "img/alenca.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -109,15 +109,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\a.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\alenca.jpg"
     },
     {
-      "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\b.jpg",
+      "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\berre.jpg",
       "SourceId": "BogApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\",
       "BasePath": "_content/BogApp",
-      "RelativePath": "img/b.jpg",
+      "RelativePath": "img/berre.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -128,26 +128,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\b.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\c.jpg",
-      "SourceId": "BogApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\",
-      "BasePath": "_content/BogApp",
-      "RelativePath": "img/c.jpg",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\c.jpg"
+      "OriginalItemSpec": "wwwroot\\img\\berre.jpg"
     },
     {
       "Identity": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.svg",

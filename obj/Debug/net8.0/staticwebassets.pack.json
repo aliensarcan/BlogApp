@@ -17,16 +17,12 @@
       "PackagePath": "staticwebassets\\img\\3.jpg"
     },
     {
-      "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\a.jpg",
-      "PackagePath": "staticwebassets\\img\\a.jpg"
+      "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\alenca.jpg",
+      "PackagePath": "staticwebassets\\img\\alenca.jpg"
     },
     {
-      "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\b.jpg",
-      "PackagePath": "staticwebassets\\img\\b.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\c.jpg",
-      "PackagePath": "staticwebassets\\img\\c.jpg"
+      "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\img\\berre.jpg",
+      "PackagePath": "staticwebassets\\img\\berre.jpg"
     },
     {
       "Id": "C:\\Users\\ALENCA\\BlogApp\\wwwroot\\lib\\bootstrap-icons\\bootstrap-icons.svg",
