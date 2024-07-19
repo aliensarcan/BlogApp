@@ -5,20 +5,20 @@ using BlogApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SQLitePCL;
-
 namespace BlogApp.Controllers
 {
-public class UsersController : Controller
-{
-     public UsersController()
-     {
+    public class UsersController : Controller
+    {
+        // Boş constructor (Dependency injection gerekmez)
+        public UsersController()
+        {
         
-     }
-     public IActionResult Login()
-     {
-        return View();
-     }
-     
-           
-}
+        }
+
+        // Login sayfasını gösterir
+        public IActionResult Login()
+        {
+            return View();
+        }
+    }
 }
