@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BogApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1cb5f9f3316e05cb33e7e43e1b0da42a737ef8eb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1c839d6dd24b82a7733fa085c5ba1735e5b1b587")]
 [assembly: System.Reflection.AssemblyProductAttribute("BogApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BogApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
