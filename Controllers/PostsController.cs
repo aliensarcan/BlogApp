@@ -1,46 +1,36 @@
+using System.Security.Claims;
 using BlogApp.Data.Abstract;
 using BlogApp.Data.Concrete.EfCore;
 using BlogApp.Entity;
 using BlogApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using SQLitePCL;
 
 namespace BlogApp.Controllers
 {
     public class PostsController : Controller
     {
-        private IPostRepository _postRepository; // Post repository arayüzü
-
-        private ICommentRepository _commentRepository; // Comment repository arayüzü
-
-        // Dependency injection ile repository nesnelerini alır
+        private IPostRepository _postRepository;
+        private ICommentRepository _commentRepository;
         public PostsController(IPostRepository postRepository, ICommentRepository commentRepository)
         {
             _postRepository = postRepository;
             _commentRepository = commentRepository;
         }
-
-        // Blog yazılarının listesini gösterir
         public async Task<IActionResult> Index(string tag)
         {
-            var claims = User.Claims;
-            var posts = _postRepository.Posts; // Tüm postları alır
+            var posts = _postRepository.Posts;
 
-            // Eğer bir tag varsa, ilgili tag'e sahip postları filtreler
-            if (!string.IsNullOrEmpty(tag))
+            if(!string.IsNullOrEmpty(tag))
             {
                 posts = posts.Where(x => x.Tags.Any(t => t.Url == tag));
             }
 
-            // View'e PostsViewModel nesnesi ile birlikte postları gönderir
-            return View(new PostsViewModel { Posts = await posts.ToListAsync() });
+            return View( new PostsViewModel { Posts = await posts.ToListAsync() });
         }
 
-        // Belirli bir postun detaylarını gösterir
         public async Task<IActionResult> Details(string url)
         {
-            // İlgili postu ve onunla ilişkili tag ve yorumları alır
             return View(await _postRepository
                         .Posts
                         .Include(x => x.Tags)
@@ -49,28 +39,28 @@ namespace BlogApp.Controllers
                         .FirstOrDefaultAsync(p => p.Url == url));
         }
 
-        // Yorum ekleme işlemini gerçekleştirir
         [HttpPost]
-        public JsonResult AddComment(int PostId, string UserName, string Text)
+        public JsonResult AddComment(int PostId, string Text)
         {
-            // Yeni yorum nesnesi oluşturur
+            var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var username = User.FindFirstValue(ClaimTypes.Name);
+            var avatar = User.FindFirstValue(ClaimTypes.UserData);
+
             var entity = new Comment {
+                PostId = PostId,
                 Text = Text,
                 PublishedOn = DateTime.Now,
-                PostId = PostId,
-                User = new User { UserName = UserName, Image = "avatar.jpg" }
+                UserId = int.Parse(userId ?? "")
             };
-
-            // Yorum repository'si aracılığıyla yorumu kaydeder
             _commentRepository.CreateComment(entity);
 
-            // Yeni yorumun detaylarını JSON olarak döner
             return Json(new { 
-                UserName,
+                username,
                 Text,
                 entity.PublishedOn,
-                entity.User.Image
+                avatar
             });
+
         }
     }
 }
