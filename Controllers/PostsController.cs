@@ -24,6 +24,7 @@ namespace BlogApp.Controllers
         // Blog yazılarının listesini gösterir
         public async Task<IActionResult> Index(string tag)
         {
+            var claims = User.Claims;
             var posts = _postRepository.Posts; // Tüm postları alır
 
             // Eğer bir tag varsa, ilgili tag'e sahip postları filtreler
