@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using SQLitePCL;
 namespace BlogApp.Controllers
 {
@@ -29,6 +30,23 @@ namespace BlogApp.Controllers
                 return RedirectToAction("Index" ,"Posts");
             }
             return View();
+            
+        }
+
+         public IActionResult Register()
+        {
+            return View();
+            
+        }
+
+        [HttpPost]
+        public IActionResult Register(RegisterViewModel model)
+        {
+            if(ModelState.IsValid)
+            {
+                return RedirectToAction("Login");
+            }
+            return View(model);
         }
         
         public async Task<IActionResult> Logout()
