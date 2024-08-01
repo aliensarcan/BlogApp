@@ -42,6 +42,7 @@ namespace BlogApp.Data.Concrete.EfCore
                     context.Posts.AddRange(
                         new Post {
                             Title = "Asp.net core",
+                            Description = "Asp.net core",
                             Content = "Asp.net core dersleri",
                             Url = "aspnet-core",
                             IsActive = true,
@@ -57,6 +58,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                         new Post {
                             Title = "Php",
+                            Description = "Php",
                             Content = "Php core dersleri",
                             Url = "php",
                             IsActive = true,
@@ -67,6 +69,7 @@ namespace BlogApp.Data.Concrete.EfCore
                         },
                         new Post {
                             Title = "Django",
+                            Description = "Django",
                             Content = "Django dersleri",
                             Url = "django",
                             IsActive = true,
