@@ -13,7 +13,6 @@ namespace BlogApp.Controllers
     {
         private IPostRepository _postRepository;
         private ICommentRepository _commentRepository;
-
         private ITagRepository _tagRepository;
         public PostsController(IPostRepository postRepository, ICommentRepository commentRepository, ITagRepository tagRepository)
         {
@@ -23,7 +22,7 @@ namespace BlogApp.Controllers
         }
         public async Task<IActionResult> Index(string tag)
         {
-            var posts = _postRepository.Posts.Where(i =>i.IsActive);
+            var posts = _postRepository.Posts.Where(i => i.IsActive);
 
             if(!string.IsNullOrEmpty(tag))
             {
@@ -72,7 +71,8 @@ namespace BlogApp.Controllers
         public IActionResult Create()
         {
             return View();
-        }
+        }   
+
         [HttpPost]
         [Authorize]
         public IActionResult Create(PostCreateViewModel model)
@@ -82,26 +82,25 @@ namespace BlogApp.Controllers
                 var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
 
                 _postRepository.CreatePost(
-                    new Post{
-                        Title=model.Title,
+                    new Post {
+                        Title = model.Title,
                         Content = model.Content,
-                        Url=model.Url,
-                        UserId=int.Parse(userId ?? ""),
-                        PublishedOn=DateTime.Now,
-                        Image="1.jpg",
-                        IsActive=false
-
+                        Url = model.Url,
+                        UserId = int.Parse(userId ?? ""),
+                        PublishedOn = DateTime.Now,
+                        Image = "1.jpg",
+                        IsActive = false
                     }
                 );
                 return RedirectToAction("Index");
             }
             return View(model);
-        }
+        }       
 
         [Authorize]
         public async Task<IActionResult> List()
         {
-           var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "");
+            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier) ?? "");
             var role = User.FindFirstValue(ClaimTypes.Role);
 
             var posts = _postRepository.Posts;
@@ -112,7 +111,8 @@ namespace BlogApp.Controllers
             }
 
             return View(await posts.ToListAsync());
-        }
+        }  
+
         [Authorize]
         public IActionResult Edit(int? id)
         {
@@ -126,7 +126,7 @@ namespace BlogApp.Controllers
                 return NotFound();
             }
 
-            ViewBag.Tags= _tagRepository.Tags.ToList();
+            ViewBag.Tags = _tagRepository.Tags.ToList();
 
             return View(new PostCreateViewModel {
                 PostId = post.PostId,
@@ -141,7 +141,7 @@ namespace BlogApp.Controllers
 
         [Authorize]
         [HttpPost]
-        public IActionResult Edit(PostCreateViewModel model)
+        public IActionResult Edit(PostCreateViewModel model, int[] tagIds)
         {
             if(ModelState.IsValid)
             {
@@ -158,9 +158,10 @@ namespace BlogApp.Controllers
                     entityToUpdate.IsActive = model.IsActive;
                 }
 
-                _postRepository.EditPost(entityToUpdate);
+                _postRepository.EditPost(entityToUpdate,tagIds);
                 return RedirectToAction("List");
             }
+            ViewBag.Tags = _tagRepository.Tags.ToList();
             return View(model);
         }
     }
